@@ -9,6 +9,7 @@ import java.util.Locale;
 
 public  class MyLocaleResolver implements LocaleResolver {
 
+
     @Override
     public Locale resolveLocale(HttpServletRequest request) {
         String l = request.getParameter("l");
@@ -18,7 +19,6 @@ public  class MyLocaleResolver implements LocaleResolver {
             locale = new Locale(split[0], split[1]);
         }
         return locale;
-
     }
 
     @Override
